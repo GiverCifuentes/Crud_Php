@@ -1,6 +1,6 @@
 <?php
-    require_once('../Modelo/Competencia.php');
-    require_once('../conexion.php');
+    //require_once('../Modelo/Competencia.php');
+    //require_once('../conexion.php');
     class CrudCompetencia{
 
         public function __construct(){}

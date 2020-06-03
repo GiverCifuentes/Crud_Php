@@ -1,5 +1,5 @@
 <?php
-
+require_once('../conexion.php');
 require_once('../Modelo/Competencia.php'); //Vincular la clase competencia
 require_once('../Modelo/Crud.Competencia.php'); //Vincular la clase crud
 
