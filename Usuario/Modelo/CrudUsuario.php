@@ -7,7 +7,7 @@ class CrudUsuario{
      public function ValidarAcceso($Usuario){
           $Db = Db::Conectar();
 
-          $sql = $Db->prepare('SELECT * FROM usuarios WHERE NombreUsuario=:NombreUsuario AND Contrasena=:Contrasena AND IdEstado=1');
+          $sql = $Db->prepare('SELECT * FROM usuario WHERE NombreUsuario=:NombreUsuario AND Contrasena=:Contrasena AND IdEstado=1');
           $sql->bindvalue('NombreUsuario',$Usuario->getNombreUsuario());
           $sql->bindvalue('Contrasena',$Usuario->getContrasena());
           $sql->execute();//ejecuta  consulta

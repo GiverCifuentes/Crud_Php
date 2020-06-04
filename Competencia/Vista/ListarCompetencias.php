@@ -1,5 +1,5 @@
 <?php
-    require_once('../conexion.php');
+    require_once('../../conexion.php');
     require_once('../Modelo/Competencia.php');
     require_once('../Modelo/Crud.Competencia.php'); //Incluir el modelo CrudCompetencia
 
@@ -17,7 +17,7 @@
 </head>
 <body>
     <h1 align="center">Listado de competencias</h1>
-    <a href="../TCPDF/examples/reportepdfcompetencia.php">reporte Pdf</a>
+    <a href="../../TCPDF/examples/reportepdfcompetencia.php">reporte Pdf</a>
     <table align="center" border="1">
     
         <thead>
