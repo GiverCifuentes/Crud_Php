@@ -9,7 +9,7 @@ class CrudUsuario{
 
           $sql = $Db->prepare('SELECT * FROM usuario WHERE NombreUsuario=:NombreUsuario AND Contrasena=:Contrasena AND IdEstado=1');
           $sql->bindvalue('NombreUsuario',$Usuario->getNombreUsuario());
-          $sql->bindvalue('Contrasena',$Usuario->getContrasena());
+          $sql->bindvalue('Contrasena',md5($Usuario->getContrasena()));
           $sql->execute();//ejecuta  consulta
           $MiUsuario = new Usuario();
           $MiUsuario->SetExiste(0);

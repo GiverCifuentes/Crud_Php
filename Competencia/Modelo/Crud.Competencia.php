@@ -9,7 +9,7 @@
             $Db = Db::Conectar(); //Conectar a la base de datos
             $Insert = $Db->prepare('INSERT INTO competencia VALUES(:CodigoCompetencia,:NombreCompetencia)');
             $Insert->bindValue('CodigoCompetencia',$Competencia->getCodigoCompetencia());
-            $Insert->bindValue('NombreCompetencia',$Competencia->getNombreCompetencia());
+            $Insert->bindValue('NombreCompetencia',md5($Competencia->getNombreCompetencia()));
             try{
                 $Insert->execute(); //Ejecutar el insert
                 echo "Registro exitoso";
